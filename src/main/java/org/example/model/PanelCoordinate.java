@@ -2,7 +2,7 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class PanelCoordinate {
+public class PanelCoordinate implements Tolerance {
 
   private final int x;
   private final int y;
@@ -30,7 +30,8 @@ public class PanelCoordinate {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     PanelCoordinate that = (PanelCoordinate) o;
-    return x == that.x && y == that.y;
+    return equalsWithTolerance(this.x, that.x, 1e-10) &&
+        equalsWithTolerance(this.y, that.y, 1e-10);
   }
 
   @Override

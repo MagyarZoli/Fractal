@@ -2,7 +2,7 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class Coordinate {
+public class Coordinate implements Tolerance {
 
   private final double x;
   private final double y;
@@ -30,7 +30,8 @@ public class Coordinate {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Coordinate that = (Coordinate) o;
-    return Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0;
+    return equalsWithTolerance(this.x, that.x, 1e-10) &&
+        equalsWithTolerance(this.y, that.y, 1e-10);
   }
 
   @Override
