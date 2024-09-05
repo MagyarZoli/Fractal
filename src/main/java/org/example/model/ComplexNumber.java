@@ -59,6 +59,10 @@ public class ComplexNumber {
     return real + " + " + imaginary + "i";
   }
 
+  public String toStringFormat() {
+    return String.format("%.4f + %.4fi", real, imaginary);
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
