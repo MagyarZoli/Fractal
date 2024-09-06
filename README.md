@@ -31,3 +31,6 @@ YouTube [A Mandelbrot-készleten túl, bevezető a holomorf dinamikába](https:/
 
 ## Szerző
 Magyar Zoltán
+
+## Nyilatkozat
+Nyilatkozom, hogy az alábbi pályázati anyag saját alkotásom, és minden szerzői jogom megvan hozzá.
