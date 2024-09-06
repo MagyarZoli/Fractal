@@ -4,8 +4,18 @@ import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
 
+/**
+ * Tesztadatokat biztosít a következöhőz: {@link PanelCoordinateTest}.
+ * Ez az osztály argumentumokat generál az átalakításainak teszteléséhez.
+ */
 public class PanelCoordinateArguments {
 
+  /**
+   * Példaadatokat ad a komplex szám konvertálás teszteléséhez.
+   * @return Egy argumentumfolyam, ahol egy komplex szám,
+   *         panel szélessége és magassága, x és y tengely méretarányának mértékegysége
+   *         és egy várható panel koordinátátt tartalmazza.
+   */
   private static Stream<Arguments> complexNumberExample() {
     return Stream.of(
         Arguments.of(
@@ -31,6 +41,12 @@ public class PanelCoordinateArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad a koordináta konvertálás teszteléséhez.
+   * @return Egy argumentumfolyam, ahol egy koordináta,
+   *         panel szélessége és magassága, x és y tengely méretarányának mértékegysége
+   *         és egy várható panel koordinátátt tartalmazza.
+   */
   private static Stream<Arguments> coordinateExample() {
     return Stream.of(
         Arguments.of(

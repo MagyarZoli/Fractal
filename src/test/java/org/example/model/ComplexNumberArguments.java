@@ -4,8 +4,16 @@ import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
 
+/**
+ * Tesztadatokat biztosít a következőhöz: {@link ComplexNumberTest}.
+ * Ez az osztály argumentumokat generál a komplex számok alapműveleteinek és átalakításainak teszteléséhez.
+ */
 public class ComplexNumberArguments {
 
+  /**
+   * Példaadatokat ad az összeadás teszteléséhez.
+   * @return Egy olyan argumentumfolyamot, amely komplex számpárokat és azok várható összegeit tartalmazza.
+   */
   private static Stream<Arguments> addExample() {
     return Stream.of(
         Arguments.of(
@@ -31,6 +39,10 @@ public class ComplexNumberArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad a kivonás teszteléséhez.
+   * @return Egy olyan argumentumfolyamot, amely komplex számpárokat és azok várható kivont összegeit tartalmazza.
+   */
   private static Stream<Arguments> subtractExample() {
     return Stream.of(
         Arguments.of(
@@ -56,6 +68,10 @@ public class ComplexNumberArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad a szorzás teszteléséhez.
+   * @return Egy olyan argumentumfolyamot, amely komplex számpárokat és azok várható szorzatát tartalmazza.
+   */
   private static Stream<Arguments> multiplyExample() {
     return Stream.of(
         Arguments.of(
@@ -81,6 +97,10 @@ public class ComplexNumberArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad az osztás teszteléséhez.
+   * @return Egy olyan argumentumfolyamot, amely komplex számpárokat és azok várható osztás összegeit tartalmazza.
+   */
   private static Stream<Arguments> divideExample() {
     return Stream.of(
         Arguments.of(
@@ -106,6 +126,10 @@ public class ComplexNumberArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad az koordináta konvertálás teszteléséhez.
+   * @return Egy argumentumfolyam, ahol egy koordinátátt és egy várható komplex számot tartalmazza.
+   */
   private static Stream<Arguments> coordinateExample() {
     return Stream.of(
         Arguments.of(
@@ -123,6 +147,12 @@ public class ComplexNumberArguments {
     );
   }
 
+  /**
+   * Példaadatokat ad a panel koordináta konvertálás teszteléséhez.
+   * @return Egy argumentumfolyam, ahol egy panel koordinátátt,
+   *         panel szélessége és magassága, x és y tengely méretarányának mértékegysége
+   *         és egy várható komplex számot tartalmazza.
+   */
   private static Stream<Arguments> panelCoordinateExample() {
     return Stream.of(
         Arguments.of(
